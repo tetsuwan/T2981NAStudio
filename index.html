@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>T2981NA Studio</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#0f0f1a;--card:#1a1a2e;--accent:#e07b39;--text:#e0e0e0;--dim:#888;--green:#2d6a4f}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.hero{text-align:center;padding:60px 20px 40px;background:linear-gradient(135deg,#1a1a2e 0%,#16213e 100%)}
+.hero h1{font-size:2.4em;letter-spacing:2px;margin-bottom:8px}
+.hero .accent{color:var(--accent)}
+.hero p{color:var(--dim);font-size:1.1em}
+
+.container{max-width:800px;margin:0 auto;padding:0 20px}
+
+.section{padding:50px 0}
+.section h2{font-size:1.6em;margin-bottom:20px;color:var(--accent)}
+
+.game-card{background:var(--card);border-radius:16px;padding:30px;display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.game-icon{width:100px;height:100px;border-radius:20px;background:var(--green);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.game-icon svg{width:64px;height:64px}
+.game-info{flex:1;min-width:200px}
+.game-info h3{font-size:1.3em;margin-bottom:8px}
+.game-info p{color:var(--dim);font-size:0.95em;margin-bottom:12px}
+.badge{display:inline-block;background:var(--accent);color:#fff;padding:4px 14px;border-radius:20px;font-size:0.8em;font-weight:600}
+
+.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-top:20px}
+.feature{background:var(--card);border-radius:12px;padding:20px;text-align:center}
+.feature .icon{font-size:1.8em;margin-bottom:8px}
+.feature h4{margin-bottom:6px;font-size:1em}
+.feature p{color:var(--dim);font-size:0.85em}
+
+footer{text-align:center;padding:40px 20px;color:var(--dim);font-size:0.85em;border-top:1px solid #222}
+footer a{color:var(--dim)}
+footer a:hover{color:var(--accent)}
+.footer-links{margin-bottom:12px}
+.footer-links a{margin:0 12px}
+
+.contact-btn{display:inline-block;background:var(--accent);color:#fff;padding:10px 28px;border-radius:8px;font-size:1em;font-weight:600;cursor:pointer;border:none;transition:opacity 0.2s}
+.contact-btn:hover{opacity:0.85;text-decoration:none}
+
+.modal-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.7);z-index:100;align-items:center;justify-content:center}
+.modal-overlay.active{display:flex}
+.modal{background:var(--card);border-radius:16px;padding:32px;width:90%;max-width:460px;position:relative}
+.modal h3{font-size:1.3em;margin-bottom:16px;color:var(--accent)}
+.modal label{display:block;color:var(--dim);font-size:0.85em;margin-bottom:4px;margin-top:14px}
+.modal input,.modal textarea{width:100%;padding:10px 12px;border-radius:8px;border:1px solid #333;background:#0f0f1a;color:var(--text);font-family:inherit;font-size:0.95em}
+.modal textarea{height:120px;resize:vertical}
+.modal input:focus,.modal textarea:focus{outline:none;border-color:var(--accent)}
+.modal-btns{margin-top:20px;display:flex;gap:12px;justify-content:flex-end}
+.modal-btns button{padding:10px 24px;border-radius:8px;border:none;font-size:0.95em;font-weight:600;cursor:pointer}
+.btn-send{background:var(--accent);color:#fff}
+.btn-send:hover{opacity:0.85}
+.btn-cancel{background:#333;color:var(--text)}
+.btn-cancel:hover{background:#444}
+.modal-close{position:absolute;top:12px;right:16px;background:none;border:none;color:var(--dim);font-size:1.4em;cursor:pointer}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <h1>T2981NA <span class="accent">Studio</span></h1>
+  <p>Indie Game Developer &mdash; Classic Games, Modern Fun</p>
+</div>
+
+<div class="container">
+
+  <div class="section">
+    <h2>Our Games</h2>
+    <div class="game-card">
+      <div class="game-icon">
+        <svg viewBox="0 0 64 64" fill="none">
+          <rect x="8" y="8" width="48" height="48" rx="6" fill="#245a3a"/>
+          <circle cx="26" cy="26" r="7" fill="#fff"/>
+          <circle cx="38" cy="38" r="7" fill="#fff"/>
+          <circle cx="38" cy="26" r="7" fill="#111"/>
+          <circle cx="26" cy="38" r="7" fill="#111"/>
+        </svg>
+      </div>
+      <div class="game-info">
+        <h3>Reversi</h3>
+        <p>The classic board game Reversi (Othello) — now on Facebook Messenger. Play against 7 levels of AI, challenge friends, or match with random opponents worldwide.</p>
+        <span class="badge">Available on Messenger</span>
+      </div>
+    </div>
+
+    <div class="features">
+      <div class="feature">
+        <div class="icon">&#129302;</div>
+        <h4>7-Level AI</h4>
+        <p>From Beginner to Master. Find your perfect challenge.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">&#128101;</div>
+        <h4>Friend Match</h4>
+        <p>Challenge your Messenger friends to a game.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">&#127760;</div>
+        <h4>Random Match</h4>
+        <p>Play against opponents from around the world.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">&#127922;</div>
+        <h4>Classic Rules</h4>
+        <p>Authentic Reversi with smooth animations.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="about">
+    <h2>About</h2>
+    <p>T2981NA Studio is an indie game studio focused on bringing classic board games to modern platforms. We believe the best games are simple to learn but endlessly strategic. Our mission is to connect players around the world through timeless gameplay experiences.</p>
+  </div>
+
+  <div class="section" id="contact">
+    <h2>Contact</h2>
+    <p>For questions, feedback, or support:</p>
+    <button class="contact-btn" onclick="openContact()">Send us a message</button>
+  </div>
+
+</div>
+
+<!-- Contact Modal -->
+<div class="modal-overlay" id="contactModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeContact()">&times;</button>
+    <h3>Contact T2981NA Studio</h3>
+    <label for="c_name">Your Name</label>
+    <input type="text" id="c_name" placeholder="Name">
+    <label for="c_subject">Subject</label>
+    <input type="text" id="c_subject" placeholder="Subject">
+    <label for="c_body">Message</label>
+    <textarea id="c_body" placeholder="Write your message here..."></textarea>
+    <div class="modal-btns">
+      <button class="btn-cancel" onclick="closeContact()">Cancel</button>
+      <button class="btn-send" onclick="sendContact()">Send</button>
+    </div>
+  </div>
+</div>
+
+<script>
+function openContact(){document.getElementById('contactModal').classList.add('active')}
+function closeContact(){document.getElementById('contactModal').classList.remove('active')}
+document.getElementById('contactModal').addEventListener('click',function(e){
+  if(e.target===this)closeContact();
+});
+function sendContact(){
+  var n=document.getElementById('c_name').value.trim();
+  var s=document.getElementById('c_subject').value.trim()||'Inquiry from website';
+  var b=document.getElementById('c_body').value.trim();
+  if(!b){alert('Please enter a message.');return;}
+  var body=(n?'From: '+n+'\n\n':'')+b;
+  window.location.href='mailto:'+['tkaneko11111','gmail.com'].join('@')+'?subject='+encodeURIComponent(s)+'&body='+encodeURIComponent(body);
+  closeContact();
+}
+</script>
+
+<footer>
+  <div class="footer-links">
+    <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <p>&copy; 2026 T2981NA Studio. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
