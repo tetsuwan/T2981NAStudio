@@ -17,6 +17,7 @@ h2{color:#e07b39;font-size:1.2em;margin:30px 0 12px}
 p{margin-bottom:14px;color:#ccc}
 ol{margin:0 0 14px 24px;color:#ccc}
 li{margin-bottom:10px}
+.email{display:inline-block;background:#1a1a2e;border:1px solid #333;padding:6px 12px;border-radius:4px;font-family:monospace;color:#e07b39}
 footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px solid #222}
 </style>
 </head>
@@ -37,16 +38,20 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
   <ol>
     <li>Go to your Facebook Settings.</li>
     <li>Navigate to "Settings &amp; Privacy" &gt; "Settings" &gt; "Apps and Websites".</li>
-    <li>Find the game you played in the list of apps.</li>
+    <li>Find the game you played (for example, Reversi) in the list of apps.</li>
     <li>Click "Remove" to revoke the app's access to your data.</li>
   </ol>
   <p>This will remove all data associated with the game from your Facebook account.</p>
 
-  <h2>Method 3: Contact Us Directly</h2>
-  <p>If you would like to request complete deletion of all your data, please email us at <a href="mailto:tetsuwan28go@outlook.com">tetsuwan28go@outlook.com</a>. We will process your request within 30 days.</p>
+  <h2>Method 3: Contact Us Directly by Email</h2>
+  <p>If you would like to request complete deletion of all your data, please email us at:</p>
+  <p><a href="mailto:tetsuwan28go@outlook.com?subject=Data%20Deletion%20Request%20-%20Reversi" class="email">tetsuwan28go@outlook.com</a></p>
+  <p>Our game does not access your name, so please tell us whether you bought points and, if so, the approximate date and time of each purchase and the device you used (iPhone, Android or web browser). This lets us find your purchase records. Deleting them also removes any points you have left. We will process your request and confirm completion within 30 days of receipt.</p>
+  <p>Alternatively, you may use the <a href="index.html#contact">contact form on our website</a>.</p>
 
   <h2>What Data We Store</h2>
-  <p>Our games store only the following data through Facebook's player data APIs: your game statistics (wins, losses, draws). We do not maintain separate databases or servers. All data is stored within Facebook's infrastructure.</p>
+  <p>Through Facebook's player data APIs we store your game statistics (wins, losses, draws) and progress. Multiplayer match state is relayed through Google Firebase while a match is in progress.</p>
+  <p>If you buy points, our purchase server (hosted on Cloudflare) stores your game-scoped Player ID, your purchase records (product, purchase token, time, refund status), your point balance and the points you have used. It stores no names, email addresses or payment details. Method 1 and Method 2 do not delete these purchase records; use Method 3.</p>
 </div>
 
 <footer>

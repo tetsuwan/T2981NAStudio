@@ -29,7 +29,7 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
 </div>
 
 <div class="container">
-  <p><strong>Last updated:</strong> April 29, 2026</p>
+  <p><strong>Last updated:</strong> October 18, 2026</p>
 
   <p>T2981NA Studio ("we", "us", or "our") operates Reversi on the Facebook Instant Games platform. This Privacy Policy explains how we collect, use, and protect your information when you play our game.</p>
 
@@ -65,7 +65,17 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
   <h3>In multiplayer mode</h3>
   <ul>
     <li>Your Facebook Player ID is exchanged with your opponent's device to enable real-time matches. No other personal information is exchanged.</li>
+    <li>The current state of a match (board position, whose turn it is, and the two players' Player IDs) is relayed through Google Firebase Realtime Database so that moves reach your opponent.</li>
   </ul>
+
+  <h3>If you buy points (in-app purchases)</h3>
+  <ul>
+    <li>Your game-scoped Player ID, provided by Facebook in a signed form</li>
+    <li>Purchase details from Meta's signed receipt: the product, a purchase token, and the time of purchase</li>
+    <li>Your point balance, each point you use (Undo or Best move), and whether a purchase was refunded</li>
+    <li>Purchase and refund notifications that Meta sends to our server, which may include the user ID Meta assigns to the purchase</li>
+  </ul>
+  <p>Payments are processed by Meta (and by Apple or Google when you buy on their devices). We never receive your card number or other payment details.</p>
 
   <p>Our game operates under Facebook's Zero Permissions mode. We do not access your display name, profile photo, friend list, email address, phone number, or any personal information beyond what is listed above.</p>
 
@@ -76,6 +86,7 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
     <li>Save your game progress and statistics</li>
     <li>Display leaderboard rankings within the game</li>
     <li>Match you with online opponents in multiplayer mode</li>
+    <li>Verify in-app purchases, keep your point balance, and handle refunds</li>
     <li>Improve game balance and user experience</li>
   </ul>
 
@@ -83,15 +94,17 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
   <p>Reversi displays advertisements through Facebook Audience Network. These ads are served by Meta and are subject to Meta's own advertising policies and data practices. Meta may use your Player ID and platform identifiers to serve ads. We do not share your personal data with third-party advertisers directly. For more information, please refer to <a href="https://www.facebook.com/privacy/policy/" target="_blank">Meta's Privacy Policy</a>.</p>
 
   <h2>4. Data Storage and Security</h2>
-  <p>Game data is stored in two locations:</p>
+  <p>Game data is stored in the following locations:</p>
   <ul>
     <li>Facebook Instant Games' player data storage APIs (on Meta's servers)</li>
     <li>Your device's browser localStorage (under your control, can be cleared via your browser settings)</li>
+    <li>Multiplayer match state: Google Firebase Realtime Database, while a match is in progress</li>
+    <li>In-app purchase records and point balances: our purchase server, hosted on Cloudflare (Workers and D1 database)</li>
   </ul>
-  <p>We do not operate separate servers or databases for your personal information. Data on Meta's servers is protected by Meta's security infrastructure.</p>
+  <p>Our purchase server only accepts requests signed by Meta or by the game, and it stores no names, email addresses or payment details. Data on Meta's servers is protected by Meta's security infrastructure.</p>
 
   <h2>5. Data Sharing</h2>
-  <p>We do not sell, trade, or transfer your personal information to third parties.</p>
+  <p>We do not sell, trade, or transfer your personal information to third parties. Cloudflare (which hosts our purchase server) and Google Firebase (which relays multiplayer moves) process data on our behalf only to provide those services.</p>
   <p>The following data is publicly visible:</p>
   <ul>
     <li>Win counts submitted to the Facebook Instant Games leaderboard</li>
@@ -105,7 +118,7 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
   <h2>7. Your Rights</h2>
   <p>You may:</p>
   <ul>
-    <li>Reset your game data within the game settings ("Reset Stats")</li>
+    <li>Reset your game data within the game settings ("Reset Stats"). This does not affect purchased points; to delete purchase records, contact us.</li>
     <li>Remove the game from your Facebook account at any time, which will revoke our access to your information</li>
     <li>Contact us to request access, correction, or deletion of your game data</li>
   </ul>
@@ -122,8 +135,8 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
     <li>Right to lodge a complaint with your local supervisory authority</li>
   </ul>
   <p>Our lawful basis for processing your data is the performance of a contract (providing the game you are using) and our legitimate interests in operating and improving the game.</p>
-  <p>Data may be transferred to and stored on servers operated by Meta Platforms in the United States. Such transfers are conducted under Meta's standard contractual clauses and applicable safeguards.</p>
-  <p>We retain your game data for as long as you use the game. When you delete the game from your Facebook account or request deletion, your data will be removed within 30 days.</p>
+  <p>Data may be transferred to and stored on servers operated by Meta Platforms, Cloudflare and Google, including in the United States. Such transfers are conducted under the providers' standard contractual clauses and applicable safeguards.</p>
+  <p>We retain your game data for as long as you use the game. Purchase records are kept as long as needed to handle refunds and to meet accounting obligations. When you request deletion, your data will be removed within 30 days, except records we are required by law to keep.</p>
 
   <h2>9. Changes to This Policy</h2>
   <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>
