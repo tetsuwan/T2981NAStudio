@@ -29,7 +29,7 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
 </div>
 
 <div class="container">
-  <p><strong>Last updated:</strong> October 18, 2026</p>
+  <p><strong>Last updated:</strong> October 20, 2026</p>
 
   <p>T2981NA Studio ("we", "us", or "our") operates Reversi on the Facebook Instant Games platform. This Privacy Policy explains how we collect, use, and protect your information when you play our game.</p>
 
@@ -38,8 +38,9 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
 
   <h3>Provided by Facebook</h3>
   <ul>
-    <li><strong>Player ID:</strong> A unique identifier assigned by Facebook</li>
-    <li><strong>Language preference:</strong> When available from Facebook</li>
+    <li><strong>Player ID:</strong> A unique identifier assigned by Facebook for this game</li>
+    <li><strong>Display name and profile photo:</strong> Shown on the game screen next to your discs, and your name is included in the turn notifications Facebook sends to your friend during a friend match. We do not store them on our servers or in Firebase.</li>
+    <li><strong>Platform and language:</strong> Whether you play on iOS, Android or the web, and your language when available</li>
   </ul>
 
   <h3>Stored via Facebook's player data APIs (on Facebook's servers)</h3>
@@ -48,13 +49,22 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
     <li>Win/loss streak (current and best)</li>
     <li>Statistics by difficulty level</li>
     <li>Daily challenge progress and streak</li>
+    <li>The AI's memory of openings from your recent games (used to vary its play)</li>
+    <li>Number of sessions and games, the time of the last full-screen ad, and whether one is due (used to space out ads)</li>
+    <li>The ID of a point use that is still waiting for our server's answer (so a point is not lost if the game closes)</li>
+    <li>A counter used when you reset your stats, the state of unfinished friend matches, and a marker that a friend match has ended</li>
     <li>Language setting</li>
   </ul>
 
   <h3>Stored locally on your device (browser localStorage)</h3>
   <ul>
-    <li>AI matchmaking preferences (used for difficulty tuning)</li>
-    <li>Cached copy of game statistics for offline display</li>
+    <li>A copy of the items above, so the game works if Facebook's storage cannot be reached</li>
+    <li>Sound setting</li>
+  </ul>
+
+  <h3>Usage events (Meta app events)</h3>
+  <ul>
+    <li>The game reports in-game events to Meta's analytics for Facebook games, for example: game mode and difficulty when a game starts, use of Undo and Best move, the number of moves and discs at that moment, whether an ad was shown or watched, share actions, purchase steps (shop opened, purchase completed or failed), your platform and the game version. We use them only in aggregate to improve the game, and they are not sent to any server of ours.</li>
   </ul>
 
   <h3>Submitted to Facebook leaderboards</h3>
@@ -65,19 +75,19 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
   <h3>In multiplayer mode</h3>
   <ul>
     <li>Your Facebook Player ID is exchanged with your opponent's device to enable real-time matches. No other personal information is exchanged.</li>
-    <li>The current state of a match (board position, whose turn it is, and the two players' Player IDs) is relayed through Google Firebase Realtime Database so that moves reach your opponent.</li>
+    <li>The current state of a match (board position, whose turn it is, the two players' Player IDs and how the match ended) is relayed through Google Firebase Realtime Database so that moves reach your opponent. It contains no names or photos. It is normally removed when the match ends, but may remain if the game is closed unexpectedly.</li>
   </ul>
 
-  <h3>If you buy points (in-app purchases)</h3>
+  <h3>If you buy points or earn them by watching ads</h3>
   <ul>
-    <li>Your game-scoped Player ID, provided by Facebook in a signed form</li>
+    <li>Your game-scoped Player ID, provided by Facebook in a signed form, and a Support PIN we create for you (shown in the shop, used to confirm data deletion requests)</li>
     <li>Purchase details from Meta's signed receipt: the product, a purchase token, and the time of purchase</li>
-    <li>Your point balance, each point you use (Undo or Best move), and whether a purchase was refunded</li>
+    <li>Your point balance, each point you use (Undo or Best move), whether a purchase was refunded, and when you earned points by watching a rewarded ad (to apply the daily limit)</li>
     <li>Purchase and refund notifications that Meta sends to our server, which may include the user ID Meta assigns to the purchase</li>
   </ul>
-  <p>Payments are processed by Meta (and by Apple or Google when you buy on their devices). We never receive your card number or other payment details.</p>
+  <p>Payments are processed by Meta or the applicable platform payment provider. We never receive your card number or other payment details.</p>
 
-  <p>Our game operates under Facebook's Zero Permissions mode. We do not access your display name, profile photo, friend list, email address, phone number, or any personal information beyond what is listed above.</p>
+  <p>We do not access your friend list, email address, phone number, or any personal information beyond what is listed above.</p>
 
   <h2>2. How We Use Your Information</h2>
   <p>We use the collected information solely to:</p>
@@ -85,7 +95,8 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
     <li>Provide and operate Reversi</li>
     <li>Save your game progress and statistics</li>
     <li>Display leaderboard rankings within the game</li>
-    <li>Match you with online opponents in multiplayer mode</li>
+    <li>Let you play matches with your Facebook friends and notify them of your turn</li>
+    <li>Space out advertisements</li>
     <li>Verify in-app purchases, keep your point balance, and handle refunds</li>
     <li>Improve game balance and user experience</li>
   </ul>
@@ -108,7 +119,7 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
   <p>The following data is publicly visible:</p>
   <ul>
     <li>Win counts submitted to the Facebook Instant Games leaderboard</li>
-    <li>Your Facebook display name (as shown by Facebook) when participating in leaderboards or multiplayer matches</li>
+    <li>Your Facebook display name (as shown by Facebook) in leaderboards, and to the friend you play with in friend matches</li>
   </ul>
   <p>In multiplayer matches, your Player ID is shared with the opposing player's device to facilitate the game session.</p>
 
@@ -118,9 +129,10 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
   <h2>7. Your Rights</h2>
   <p>You may:</p>
   <ul>
-    <li>Reset your game data within the game settings ("Reset Stats"). This does not affect purchased points; to delete purchase records, contact us.</li>
-    <li>Remove the game from your Facebook account at any time, which will revoke our access to your information</li>
-    <li>Contact us to request access, correction, or deletion of your game data</li>
+    <li>Reset your statistics and progress in the game ("Reset Stats"). This is not a complete deletion; see the <a href="data-deletion.html">Data Deletion page</a> for what is kept.</li>
+    <li>Remove the game from your Facebook account at any time, which stops the game from accessing your Facebook information</li>
+    <li>Ask us to delete your purchase records by sending the Support ID and PIN shown in the shop (see the <a href="data-deletion.html">Data Deletion page</a>)</li>
+    <li>Contact us to request access to or correction of your data</li>
   </ul>
 
   <h2>8. Rights for Users in the European Economic Area (EEA)</h2>
@@ -134,9 +146,16 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
     <li>Right to object to processing</li>
     <li>Right to lodge a complaint with your local supervisory authority</li>
   </ul>
-  <p>Our lawful basis for processing your data is the performance of a contract (providing the game you are using) and our legitimate interests in operating and improving the game.</p>
+  <p>Our lawful basis for processing your data is the performance of a contract (providing the game, keeping your progress, and delivering and keeping the points you buy) and our legitimate interests in keeping the game working, spacing out ads, preventing refund abuse, and improving the game using aggregate usage events.</p>
   <p>Data may be transferred to and stored on servers operated by Meta Platforms, Cloudflare and Google, including in the United States. Such transfers are conducted under the providers' standard contractual clauses and applicable safeguards.</p>
-  <p>We retain your game data for as long as you use the game. Purchase records are kept as long as needed to handle refunds and to meet accounting obligations. When you request deletion, your data will be removed within 30 days, except records we are required by law to keep.</p>
+  <p>Retention:</p>
+  <ul>
+    <li>Game data in Facebook's player data storage and on your device: for as long as you use the game, or until you reset or remove it</li>
+    <li>Friend match state in Firebase: until the match ends, or longer if the game was closed unexpectedly</li>
+    <li>Purchase records and point balances: for as long as you have points or may request a refund, and as needed to meet accounting obligations, unless you ask us to delete them</li>
+    <li>Purchase notifications from Meta that never become linked to a player: 30 days</li>
+  </ul>
+  <p>When you request deletion, your data will be removed within 30 days, except records we are required by law to keep.</p>
 
   <h2>9. Changes to This Policy</h2>
   <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.</p>

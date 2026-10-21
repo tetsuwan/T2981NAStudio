@@ -29,29 +29,39 @@ footer{text-align:center;padding:30px;color:#666;font-size:0.85em;border-top:1px
 </div>
 
 <div class="container">
-  <p>T2981NA Studio respects your privacy and your right to control your personal data. If you would like to delete your data associated with our games, you can do so using one of the following methods:</p>
+  <p><strong>Last updated:</strong> October 20, 2026</p>
+  <p>T2981NA Studio respects your privacy and your right to control your personal data. This page explains what each option below does and does not delete.</p>
 
-  <h2>Method 1: Delete Data Within the Game</h2>
-  <p>Open the game on Facebook Messenger, go to the main menu, and tap "Reset Stats" to delete all your game data (win/loss/draw records and saved progress).</p>
+  <h2>Method 1: Reset Stats in the Game</h2>
+  <p>Open the game, go to the main menu, and tap "Reset Stats". This resets your statistics and progress (win/loss/draw records, streaks, difficulty records, Daily Challenge progress and the AI's memory of your games).</p>
+  <p>It is not a complete deletion: your Player ID, purchased points and purchase records, your score on the Facebook leaderboard, saved friend matches, and technical counters (number of sessions and games, advertising timing) are kept.</p>
 
   <h2>Method 2: Remove the Game from Facebook</h2>
   <ol>
     <li>Go to your Facebook Settings.</li>
     <li>Navigate to "Settings &amp; Privacy" &gt; "Settings" &gt; "Apps and Websites".</li>
     <li>Find the game you played (for example, Reversi) in the list of apps.</li>
-    <li>Click "Remove" to revoke the app's access to your data.</li>
+    <li>Click "Remove".</li>
   </ol>
-  <p>This will remove all data associated with the game from your Facebook account.</p>
+  <p>This stops the game from accessing your Facebook information. Data kept in Facebook's own player data storage is handled by Meta under its policies. It does <strong>not</strong> delete records on our purchase server; use Method 3 for those.</p>
 
-  <h2>Method 3: Contact Us Directly by Email</h2>
-  <p>If you would like to request complete deletion of all your data, please email us at:</p>
+  <h2>Method 3: Ask Us to Delete Your Point Data</h2>
+  <p>If you have bought points or earned them by watching ads, our purchase server keeps records linked to your game-scoped Player ID. To delete them:</p>
+  <ol>
+    <li>Open the game and tap the shop (cart) button next to your stats.</li>
+    <li>At the bottom of the shop, note your <strong>Support ID</strong> and <strong>PIN</strong>.</li>
+    <li>Email both to us at the address below.</li>
+  </ol>
   <p><a href="mailto:tetsuwan28go@outlook.com?subject=Data%20Deletion%20Request%20-%20Reversi" class="email">tetsuwan28go@outlook.com</a></p>
-  <p>Our game does not access your name, so please tell us whether you bought points and, if so, the approximate date and time of each purchase and the device you used (iPhone, Android or web browser). This lets us find your purchase records. Deleting them also removes any points you have left. We will process your request and confirm completion within 30 days of receipt.</p>
-  <p>Alternatively, you may use the <a href="index.html#contact">contact form on our website</a>.</p>
+  <p>We delete only the records that match both the Support ID and the PIN, so nobody else can delete your data. Deleting them also removes any points you have left. We will confirm completion within 30 days of receipt.</p>
+  <p>If no Support ID appears in the shop, we hold no point data for you. You can still email us with any other privacy request.</p>
 
   <h2>What Data We Store</h2>
-  <p>Through Facebook's player data APIs we store your game statistics (wins, losses, draws) and progress. Multiplayer match state is relayed through Google Firebase while a match is in progress.</p>
-  <p>If you buy points, our purchase server (hosted on Cloudflare) stores your game-scoped Player ID, your purchase records (product, purchase token, time, refund status), your point balance and the points you have used. It stores no names, email addresses or payment details. Method 1 and Method 2 do not delete these purchase records; use Method 3.</p>
+  <ul>
+    <li><strong>Facebook player data storage (Meta's servers):</strong> your statistics and progress, the AI's memory of your games, session and game counters, advertising timing, and settings. See the <a href="privacy.html">Privacy Policy</a> for the full list.</li>
+    <li><strong>Google Firebase:</strong> the state of a friend match (board, whose turn it is, both Player IDs) while it is in progress. It is normally removed when the match ends, but may remain if the game is closed unexpectedly.</li>
+    <li><strong>Our purchase server (Cloudflare), only if you buy points or earn them by watching ads:</strong> your game-scoped Player ID and Support PIN, purchase records (product, purchase token, time, refund status), the times you earned points from ads, your point balance and the points you have used. No names, email addresses or payment details.</li>
+  </ul>
 </div>
 
 <footer>
